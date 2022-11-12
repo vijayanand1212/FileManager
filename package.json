@@ -1,0 +1,22 @@
+{
+  "name": "filemanager",
+  "version": "1.0.0",
+  "description": "File Manager",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijayanand1212/FileManager.git"
+  },
+  "author": "Vijay Anand S",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vijayanand1212/FileManager/issues"
+  },
+  "homepage": "https://github.com/vijayanand1212/FileManager#readme",
+  "devDependencies": {
+    "electron": "21.2.3"
+  }
+}
