@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -20,6 +20,9 @@ app.whenReady().then(() => {
     if (BrowserWindow.getAllWindows().length === 0) {
       createWindow();
     }
+  });
+  ipcMain.on("get-path", (event, path) => {
+    console.log(path);
   });
 });
 
