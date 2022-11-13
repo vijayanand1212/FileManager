@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
+const fs = require("fs");
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
@@ -22,7 +23,18 @@ app.whenReady().then(() => {
     }
   });
   ipcMain.on("get-path", (event, path) => {
-    console.log(path);
+    path.forEach((file) => {
+      fs.copyFile(
+        file[0],
+        `D:\\${file[1]}`,
+        (mode = fs.constants.COPYFILE_EXCL),
+        (err) => {
+          if (err) throw err;
+          console.log("Successfully Copied");
+          progress?.Report((++processed / files.Length) * 100);
+        }
+      );
+    });
   });
 });
 

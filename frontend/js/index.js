@@ -1,6 +1,3 @@
-const h1 = document.getElementById("version");
-h1.innerText = `This is ${versions.electron()}`;
-
 function dropHandler(ev) {
   console.log("File(s) dropped");
   // Prevent default behavior (Prevent file from being opened)
@@ -8,7 +5,10 @@ function dropHandler(ev) {
 
   if (ev.dataTransfer.files) {
     // Use DataTransferItemList interface to access the file(s)
-    const path = ev.dataTransfer.files[0].path;
+    const path = [];
+    [...ev.dataTransfer.files].forEach((file) => {
+      path.push([file.path, file.name]);
+    });
     console.log(path);
     versions.getPath(path);
   } else {

@@ -1,8 +1,23 @@
 h1 {
-  color: red;
+  color: rgb(34, 34, 34);
+  font-family: "Roboto Light";
+  text-decoration: underline;
 }
 #drop_zone {
-  border: 5px solid blue;
-  width: 200px;
-  height: 100px;
+  border: 3px dashed rgb(188, 188, 188);
+  border-radius: 20px;
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  vertical-align: auto;
+  align-items: center;
+}
+h2 {
+  text-align: center;
+  align-self: auto;
+  font-family: "Roboto Light";
+}
+#drag_drop {
+  width: 40%;
 }
