@@ -26,7 +26,7 @@ app.whenReady().then(() => {
     path.forEach((file) => {
       fs.copyFile(
         file[0],
-        `D:\\${file[1]}`,
+        `C:\\${file[1]}`,
         (mode = fs.constants.COPYFILE_EXCL),
         (err) => {
           if (err) throw err;
